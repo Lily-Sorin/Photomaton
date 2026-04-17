@@ -9,24 +9,27 @@
 <body>
 
     <div class="container">
-        <h1>Photo Booth 📸</h1>
-        
-        <div class="camera-container">
-            <video id="video" autoplay playsinline></video>
-            
-            <img src="cadre.png" id="frame-overlay" alt="Cadre">
+        <div id="screen-capture">
+            <h1>Souriez ! 📸</h1>
+            <div class="camera-container">
+                <video id="video" autoplay playsinline muted></video>
+                <img src="cadre.png" id="frame-overlay" alt="Cadre">
+            </div>
+            <button id="snap" class="btn-main">Prendre la photo</button>
         </div>
 
-        <button id="snap">Prendre la photo</button>
+        <div id="screen-result" style="display:none;">
+            <h1>Magnifique ! ✨</h1>
+            <div class="result-box">
+                <img id="photo-result" src="" alt="Résultat">
+            </div>
+            <div class="button-group">
+                <a id="download-link" download="ma-photo.png" class="btn-download">Télécharger</a>
+                <button id="retake" class="btn-secondary">Refaire une photo</button>
+            </div>
+        </div>
 
         <canvas id="canvas" style="display:none;"></canvas>
-        
-        <div id="result-container" style="display:none;">
-            <h3>Votre photo :</h3>
-            <img id="photo-result" src="" alt="Résultat">
-            <br>
-            <a id="download-link" download="ma-photo.png">Télécharger l'image</a>
-        </div>
     </div>
 
     <script src="script.js"></script>
