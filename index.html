@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Photobooth Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Photo Booth 📸</h1>
+        
+        <div class="camera-container">
+            <video id="video" autoplay playsinline></video>
+            
+            <img src="cadre.png" id="frame-overlay" alt="Cadre">
+        </div>
+
+        <button id="snap">Prendre la photo</button>
+
+        <canvas id="canvas" style="display:none;"></canvas>
+        
+        <div id="result-container" style="display:none;">
+            <h3>Votre photo :</h3>
+            <img id="photo-result" src="" alt="Résultat">
+            <br>
+            <a id="download-link" download="ma-photo.png">Télécharger l'image</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
